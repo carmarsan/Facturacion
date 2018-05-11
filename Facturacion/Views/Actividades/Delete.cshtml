@@ -1,0 +1,80 @@
+﻿@model Facturacion.Models.Actividad
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Actividades</h2>
+
+<h3>Está seguro de que querer borrarlo?</h3>
+<div>
+    @*<h4>Actividad</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abreviatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abreviatura)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Atrás", "Index", null, new { @class = "btn btn-success" })
+            <input type="submit" value="Borrar" class="btn btn-danger" />
+
+        </div>
+    }
+</div>
+
+<div id="dialog" style="display:none" title="Actividad existe en Obras.">No se puede borrar una Actividad en uso en las obras</div>
+
+
+    @if (ViewBag.ActividadIsInObra == true)
+    {
+        <script type="text/javascript">
+            $("#dialog").dialog("open");
+        </script>
+   }
+
+
+
+@section PageScripts{
+    <link href="/Content/dataTable/demo_table.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery.dataTables.1.8.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function() {
+                $('#dialog').dialog({
+                    autoOpen: false,
+                    width: 400,
+                    resizable: false,
+                    title: 'Actividad existente',
+                    modal: true,
+                    @*open: function(event, ui) {
+                        $(this).load("@Url.Action("ThePartialVIewActionMenthodName")");
+                    },*@
+                    buttons: {
+                        "Close": function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+}

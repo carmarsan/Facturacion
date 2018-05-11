@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Facturacion.Models.Actividad">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Actividad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Articulo">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAoAEAAIAAAAAVAAQAAAAAAAAAAABAEAA=</HashCode>
+      <FileName>Models\Articulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Banco">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Banco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.FormaPago">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAABABAIAIBAAAAAAAAQAAAAAAAAAAAAAwA=</HashCode>
+      <FileName>Models\FormaPago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Cliente">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAiAAAACAAYAEAEAoAAECECAAAAACEYAQAAgBAEkA=</HashCode>
+      <FileName>Models\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

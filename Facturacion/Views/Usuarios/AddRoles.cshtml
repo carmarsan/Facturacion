@@ -1,0 +1,63 @@
+﻿@model Facturacion.ModelView.UsuarioViewModel
+
+@{
+    ViewBag.Title = "Añadir Rol";
+}
+
+<h2>Añadir Rol al usuario: @Model.Name</h2>
+
+<h3>@ViewBag.Error</h3>
+
+@using (Html.BeginForm("AddRoles", "Usuarios", new { userId = Model.UsuarioId }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+        <div class="form-inline">
+
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Role.RoleId, "Seleccione un Rol", htmlAttributes: new { @class = "control-label col-lg-4" })
+                <div class="col-lg-8">
+                    @Html.DropDownList("RoleId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Role.RoleId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-8">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+            </div>
+
+
+        </div>
+}
+<p /><p />
+<h3>Roles actuales</h3>
+<p />
+<table class="table  table-striped table-bordered table-hover table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Roles)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Regresar", "Roles", new { userId = Model.UsuarioId }, new  { @class = "btn btn-info"})
+</div>
+
+

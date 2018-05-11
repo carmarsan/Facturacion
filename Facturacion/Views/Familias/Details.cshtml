@@ -1,0 +1,50 @@
+﻿@model Facturacion.Models.Familia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Familia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreFamilia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreFamilia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAlta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoContableCompras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoContableCompras)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoContableVentas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoContableVentas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FamiliaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

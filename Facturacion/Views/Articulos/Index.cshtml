@@ -1,0 +1,20 @@
+﻿@*@model Facturacion.ModelView.ArticuloViewModels
+@using Facturacion.HtmlHelpers*@
+
+@{
+    ViewBag.Title = "Artículos";
+   // var meta = Model.Articulos.FirstOrDefault();
+}
+
+<h2>Artículos</h2>
+
+
+<div id="divGrid" style="width:75%; margin:0 auto">
+    <table id="grid"></table>
+    <div id="pager"></div>
+</div>
+
+
+<script src="~/Scripts/Comun.js"></script>
+<script src="~/Scripts/BootstrapMenu.js"></script>
+<script src="~/Scripts/Articulo/Articulos.js"></script>

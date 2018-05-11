@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Facturacion.Models.FormaPago">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAABABAIAIBAAABBAAAQAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\Modelos Facturacion\FormaPago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Configuracion">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAAAAAADAAAAAAACgAAAjELAAAIACAYAQAAgEAAAQ=</HashCode>
+      <FileName>Models\Modelos Facturacion\Configuracion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Actividad">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Modelos Facturacion\Actividad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Articulo">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAIAEAAAAAAAAVAAAAAAAAAAAgAABAEAA=</HashCode>
+      <FileName>Models\Modelos Facturacion\Articulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Banco">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgQAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Modelos Facturacion\Banco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Cliente">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAYAEAEBoAAEDECAAAAACAYAQAAgBAEkA=</HashCode>
+      <FileName>Models\Modelos Facturacion\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facturacion.Models.Iva">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAAAAAAAAAAAAhAQAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\Modelos Facturacion\Iva.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

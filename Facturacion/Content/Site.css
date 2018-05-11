@@ -1,0 +1,141 @@
+﻿@media (min-width: 100%).container {
+    width: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+    max-width: none;
+}
+
+
+.ui-jqgrid-title {
+    color: white;
+}
+
+.ui-jqgrid-titlebar {
+    background-color: rgba(126, 12, 18, 0.68);
+}
+
+/* Ponemos la altura de los input a 27 ya que si no es muy grande  */
+.form-control {
+    height: 27px !important;
+}
+
+.container {
+    width: 100%;
+}
+
+.ui-widget-header {
+    font-size: inherit;
+}
+
+#infocnt {
+    text-align: left;
+}
+
+.ui-widget {
+    font-size: 1.0em;
+}
+
+
+/*#region FACTURAS */
+
+
+#selectClientes {
+    width: 350px;
+    height: 30px !important;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: .3em;
+}
+
+.isAbono {
+    background-color: aquamarine;
+}
+
+.isObraCerrada{
+    background-color: aquamarine;
+}
+
+
+#PanelCertificacionesAnteriores {
+    height: 50px;
+    width: 96%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#divTotales {
+    /*margin-top: 10Px;
+    margin-left: 10px;
+    width: 96%;
+    border: 1px solid black;
+    height: 200px;*/
+    /*margin-top: 10px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+    border: 1px groove #d5d1d1;
+    height: 200px;
+    position: fixed;
+    bottom: 68px;
+
+    border-radius: 6px 6px 6px 0 ;
+    -moz-border-radius: 6px 6px 6px 0 ;
+    -webkit-border-radius: 6px 6px 6px 0 ;
+}
+
+#divTotalesLeft {
+    width: 70%;
+    float: left;
+}
+
+#divTotalesRight {
+    width: 20%;
+    float: right;
+    margin-right: 40px;
+    margin-top: 15px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#gbox_gridTablaIvas {
+    /*float: right;*/
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.ui-jqgrid-sdiv .ui-jqgrid-ftable .footrow {
+    /*background-color: rgba(255, 0, 0, 0.52);*/
+    color: #FFFFFF;
+    background-image: none;
+    background-image: linear-gradient(100deg, #FFFFFF, #ff0000);
+    height: 10px !important;
+}
+
+.bootstrapMenu .dropdown-menu > li > a {
+    line-height: 2;
+}
+
+/*#endregion */

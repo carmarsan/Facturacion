@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Facturacion.Models.Detalle>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumFac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Articulo_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdArticuloAlternativo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orden)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Iva_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PorcentajeIva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TextoIva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PVP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImporteMes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImporteAnterior)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumFac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Articulo_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdArticuloAlternativo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Orden)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Iva_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PorcentajeIva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TextoIva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PVP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImporteMes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImporteAnterior)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DetalleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DetalleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DetalleID })
+        </td>
+    </tr>
+}
+
+</table>

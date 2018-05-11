@@ -1,0 +1,210 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Facturas</h2>*@
+
+@*div izquierdo con:
+    - Combo de clientes.
+    - Grid de obras con:
+        - Subgrid de Facturas
+*@
+
+<div id="all" class="api">
+
+    <div id="divIzquierdo" class="split split-horizontal">
+
+        <select id="selectClientes" style="width:96%;" class="form-control"></select>
+
+        <div id="divGrid" style="width:100%; margin-left: 10px; margin-top: 5px;">
+            <table id="grid"></table>
+        </div>
+
+    </div>
+
+    <div id="divDerecho" class="split split-horizontal">
+        <div class="panel-group" style="width:98%; margin-top:10px; margin-left: 10px; margin-bottom: 5px;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h6 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1" style="font-size:small;">Datos Factura</a>
+                    </h6>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <ul class="nav nav-tabs nav-justified">
+                            <li class="active"><a data-toggle="tab" href="#datos">Datos</a></li>
+                            <li><a data-toggle="tab" href="#cliente">Dirección Cliente y F.Pago</a></li>
+                            <li><a data-toggle="tab" href="#observaciones">Observaciones</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="datos" class="tab-pane fade in active">
+                                <p></p>
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="inputNumFac" style="margin-right: 15px; width: 75px;">Nº Factura</label>
+                                        <input class="form-control" id="inputNumFac" type="text" disabled style="width:100px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputFechaFac" style="margin-right: 15px; width: 75px; margin-left: 10px;">Fecha Fac.</label>
+                                        <input class="form-control" id="inputFechaFac" type="text" disabled style="width:100px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputCodigoCliente" style="margin-right: 15px; width: 75px;">Cliente</label>
+                                        <input type="text" class="form-control" id="inputCodigoCliente" disabled style="width:100px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="inputNombreCliente"></label>
+                                        <input type="text" class="form-control" id="inputNombreCliente" disabled style="width:700px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputCodigoObra" style="margin-right: 15px; width: 75px;">Obra</label>
+                                        <input type="text" class="form-control" id="inputCodigoObra" disabled style="width:100px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="inputNombreObra"></label>
+                                        <input type="text" class="form-control" id="inputNombreObra" disabled style="width:700px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDelegcion" style="margin-right: 15px; margin-left: 10px; width: 75px">D/A/S</label>
+                                        <input class="form-control" id="inputDelegcion" type="text" disabled style="width:100px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputObraPlus" style="margin-right: 15px; width: 75px;">Obra+</label>
+                                        <input type="text" class="form-control" id="inputObraPlus" disabled style="width:700px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputTextoFac" style="margin-right: 15px; width: 75px;">Texto Fac</label>
+                                        <input type="text" class="form-control" id="inputTextoFac" disabled style="width:700px;">
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="cliente" class="tab-pane fade">
+                                <p></p>
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="inputDireccion" style="margin-right: 15px; width: 75px;">Dirección</label>
+                                        <input class="form-control" id="inputDireccion" type="text" disabled style="width:700px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputLocalidad" style="margin-right: 15px; width: 75px;">Localidad</label>
+                                        <input class="form-control" id="inputLocalidad" type="text" disabled style="width:500px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputCP" style="margin-left: 15px; width: 45px;">CP</label>
+                                        <input type="text" class="form-control" id="inputCP" disabled style="width:100px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputProvincia" style="margin-right: 15px; width: 75px;">Provincia</label>
+                                        <input type="text" class="form-control" id="inputProvincia" disabled style="width:300px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="inputCIF" style="margin-right: 15px; width: 75px;">CIF</label>
+                                        <input type="text" class="form-control" id="inputCIF" disabled style="width:100px;">
+                                    </div>
+                                    <p style="padding: 0;"></p>
+                                    <div class="form-group">
+                                        <label for="InputFormaPago" style="margin-right: 15px; width: 175px">Forma de pago</label>
+                                        <input class="form-control" id="InputFormaPago" type="text" disabled style="width:300px;">
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="observaciones" class="tab-pane fade">
+                                <p></p>
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="textObservaciones" style="margin-right: 15px; width: 95px;">Observaciones</label>
+                                        <textarea class="form-control" id="textObservaciones" disabled style="width:700px; height:88px !important;" rows="5"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="panel-footer">Panel Footer</div>*@
+                </div>
+            </div>
+        </div>
+        <div id="divGridDetalle" style="width:100%; margin-left: 10px; margin-top: 5px;">
+            @*Tabla para el Grid*@
+            <table id="gridDetalle"></table>
+        </div>
+        <div class="panel panel-default" id="PanelCertificacionesAnteriores" style="display:none;">
+            <div class="container-fluid panel-container">
+                <div class="col-xs-3 text-left">
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span>A Deducir Certificaciones Anteriores:</span><br />
+                    <span id="spanTotalOrigen"></span>
+                </div>
+                <div class="col-xs-3 text-right">
+                    <span id="spanCertAnt"></span>
+                </div>
+            </div>
+          </div>  
+
+        <div id="divTotales">
+            <div id="divTotalesLeft">
+                <table id="gridTablaIvas"></table>
+            </div>
+
+            <div id="divTotalesRight">
+                <div class="pull-left">Subtotal:</div>
+                <div class="pull-right" id="subtotal"></div>
+                @*<p class="clearfix" />
+                <div class="pull-left"></div>
+                <div class="pull-right"></div>*@
+                <p class="clearfix" />
+                <div class="pull-left">Base Imponible:</div>
+                <div class="pull-right" id="baseimponible"></div>
+                <p class="clearfix" />
+                <div class="pull-left">IVA:</div>
+                <div class="pull-right" id="iva"></div>
+                <p class="clearfix" />
+                <div class="pull-left">Total:</div>
+                <div class="pull-right" id="total"></div>
+                
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@*Div para la nueva/modificar factura*@
+<div id="divFactura" style="display:none;">
+
+</div>
+
+@*Submenu para las facturas*@
+@*<div id="submenu" class="text-center" style="height: 300px; border:1px solid #ddd">
+
+</div>*@
+
+
+
+    <link href="~/Content/split.css" rel="stylesheet" />
+    <script src="~/Scripts/split.js/split.js"></script>
+
+    <script src="~/Scripts/Comun.js"></script>
+    <script src="~/Scripts/BootstrapMenu.js"></script>
+    <script src="~/Scripts/Factura/Facturas.js"></script>
+
+    <script>
+
+        Split(['#divIzquierdo', '#divDerecho'], {
+            sizes: [25, 75],
+            minSize: 450
+        });
+
+    </script>
+
+

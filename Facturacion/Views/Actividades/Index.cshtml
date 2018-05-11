@@ -1,0 +1,94 @@
+﻿@model Facturacion.ModelView.ActividadViewModels
+@using Facturacion.HtmlHelpers
+
+
+<h2>Lista de Actividades</h2>
+<br />
+
+@{
+    ViewBag.Title = "Actividades";
+    // Esto es para saber el nombre de los campos ya que si no no podemos
+    var meta = Model.Actividades.FirstOrDefault();
+}
+
+
+
+<div id="divGrid" style="width:50%; margin:0 auto">
+    <table id="grid"></table>
+    <div id="pager"></div>
+</div>
+@*
+    <p>
+        @Html.ActionLink("Nueva", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+
+
+
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>
+               @Html.DisplayNameFor(model => meta.Abreviatura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => meta.Nombre)
+            </th>
+            <td style="text-align:center; width:120px;">
+                @Html.DisplayNameFor(model => meta.Mostrar)
+                </th>
+    <th></th>
+        </tr>
+
+        @foreach (var item in Model.Actividades)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Abreviatura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td style="text-align:center;">
+                    @Html.DisplayFor(modelItem => item.Mostrar)
+                </td>
+                <td width="150px">
+                    @Html.ActionLink(" ", "Edit", new { id = item.ActividadID }, new { @class = "btn btn-default  glyphicon glyphicon-pencil", Title = "Editar" })
+                    @Html.ActionLink(" ", "Details", new { id = item.ActividadID }, new { @class = "btn btn-default  glyphicon glyphicon-list-alt", Title = "Detalles" })
+                    @Html.ActionLink(" ", "Delete", new { id = item.ActividadID }, new { @class = "btn btn-default  glyphicon glyphicon-trash btn-danger", Title = "Borrar" })
+                </td>
+            </tr>
+
+
+        }
+
+    </table>
+    <br />
+    <br />
+    <div class="btn-group pull-right">
+        @if (Model.PagingInfo.TotalPages > 1) {
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x })) //@Model.PagingInfo.CurrentPage de @Model.PagingInfo.TotalPages
+        }
+    </div>*@
+
+
+<link href="~/Content/themes/redmon/jquery-ui.css" rel="stylesheet" />
+<!-- Bootstrap core CSS -->
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/jquery.jqGrid/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.12.4.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.4.js"></script>
+<script src="~/Scripts/i18n/grid.locale-es.js"></script>
+<script src="~/Scripts/jquery.jqGrid.js"></script>
+
+
+<script src="~/Scripts/Actividad/Actividad.js"></script>
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.0.min.js"></script>
+<script src="~/Scripts/i18n/grid.locale-es.js"></script>
+<script src="~/Scripts/jquery.jqGrid.min.js"></script>
+
+
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />*@

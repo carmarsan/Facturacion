@@ -1,0 +1,36 @@
+﻿@model Facturacion.Models.Actividad
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Actividades</h2>
+
+<div>
+    <h4>Detalles</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abreviatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abreviatura)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Atras", "Index", null, new { @class = "btn btn-success" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ActividadID }, new { @class = "btn btn-primary" })
+
+</p>
